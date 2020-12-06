@@ -9,7 +9,11 @@
 
 <body>
     <h1>Live Stream</h1>
+    {% if camera %}
     <img src="{{ url_for('video_feed') }}">
+    {% else %}
+    <img src="/static/video-not-available.svg">
+    {% endif %}
 </body>
 
 </html>
